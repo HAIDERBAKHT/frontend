@@ -1,0 +1,553 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | SECURIDE 24</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg" />
+  <link rel="apple-touch-icon" href="../../assets/images/logo.webp" />
+  <link rel="stylesheet" href="../../css/base.css" />
+  <link rel="stylesheet" href="../../css/layout.css" />
+  <link rel="stylesheet" href="../../css/components.css" />
+  <link rel="stylesheet" href="../../css/header.css" />
+  <link rel="stylesheet" href="../../css/home.css" />
+  <link rel="stylesheet" href="../../css/pages.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../../index.html" class="logo">
+        <img src="../../assets/images/logo.webp" alt="SECURIDE 24" />
+      </a>
+      <nav class="main-nav">
+        <button class="nav-item" data-mega="solutions">
+          Solutions
+          <span class="nav-arrow"></span>
+        </button>
+        <button class="nav-item" data-mega="capabilities">
+          Capabilities
+          <span class="nav-arrow"></span>
+        </button>
+        <button class="nav-item" data-mega="industries">
+          Industries
+          <span class="nav-arrow"></span>
+        </button>
+      </nav>
+      <div class="header-actions">
+        <button class="action-btn" id="menuBtn" aria-label="Open menu">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        <button class="action-btn" id="searchBtn" aria-label="Search">
+          <svg class="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+        </button>
+        <button class="action-btn btn-contact" id="contactBtn">Contact</button>
+      </div>
+    </div>
+  </header>
+  <!-- Mega Dropdown: Solutions -->
+  <div class="mega-dropdown" id="megaSolutions" data-mega="solutions">
+    <div class="mega-inner">
+      <div class="mega-col mega-left">
+        <h3>Solutions</h3>
+        <p>Integrated protection, mobility security, intelligence support, and incident response services designed for high-risk environments.</p>
+        <a href="../solutions/index.html" class="overview-cta">
+          Overview
+          <span class="arrow-icon"></span>
+        </a>
+      </div>
+      <div class="mega-col mega-right">
+        <ul class="mega-list">
+          <li><a href="../solutions/risk-intelligence-monitoring.html">Risk Intelligence & Monitoring</a></li>
+          <li><a href="../solutions/executive-mobility-secure-travel.html">Executive Mobility & Secure Travel</a></li>
+          <li><a href="../solutions/executive-protection-coordination.html">Executive Protection Coordination</a></li>
+          <li><a href="../solutions/crisis-response-incident-coordination.html">Crisis Response & Incident Coordination</a></li>
+          <li><a href="../solutions/strategic-risk-advisory.html">Strategic Risk Advisory</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Mega Dropdown: Capabilities -->
+  <div class="mega-dropdown" id="megaCapabilities" data-mega="capabilities">
+    <div class="mega-inner">
+      <div class="mega-col mega-left">
+        <h3>Capabilities</h3>
+        <p>Our operational capabilities integrate intelligence analysis, protective coordination, and crisis management to deliver assured outcomes in complex environments.</p>
+        <a href="../capabilities/index.html" class="overview-cta">
+          Overview
+          <span class="arrow-icon"></span>
+        </a>
+      </div>
+      <div class="mega-col mega-right">
+        <ul class="mega-list">
+          <li><a href="../capabilities/intelligence-risk-analysis.html">Intelligence & Risk Analysis</a></li>
+          <li><a href="../capabilities/security-operations-monitoring.html">Security Operations & Monitoring</a></li>
+          <li><a href="../capabilities/protective-operations-coordination.html">Protective Operations Coordination</a></li>
+          <li><a href="../capabilities/incident-crisis-coordination.html">Incident & Crisis Coordination</a></li>
+          <li><a href="../capabilities/secure-mobility-planning.html">Secure Mobility Planning</a></li>
+          <li><a href="../capabilities/strategic-security-advisory.html">Strategic Security Advisory</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mega Dropdown: Industries -->
+  <div class="mega-dropdown" id="megaIndustries" data-mega="industries">
+    <div class="mega-inner">
+      <div class="mega-col mega-left">
+        <h3>Industries</h3>
+        <p>Tailored risk management and protection solutions for executives, diplomats, international visitors, and organisations operating in complex or high-risk environments.</p>
+        <a href="../industries/index.html" class="overview-cta">
+          Overview
+          <span class="arrow-icon"></span>
+        </a>
+      </div>
+      <div class="mega-col mega-right">
+        <ul class="mega-list">
+          <li><a href="../industries/corporate-executives.html">Corporate Executives</a></li>
+          <li><a href="../industries/international-visitors.html">International Visitors</a></li>
+          <li><a href="../industries/diplomats-delegations.html">Diplomats & Delegations</a></li>
+          <li><a href="../industries/ngos-project-teams.html">NGOs & Project Teams</a></li>
+          <li><a href="../industries/investors-consultants.html">Investors & Consultants</a></li>
+          <li><a href="../industries/event-organisers.html">Event Organisers</a></li>
+          <li><a href="../industries/family-offices.html">Family Offices</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu Overlay -->
+  <div class="menu-overlay" id="menuOverlay">
+    <button class="menu-close" aria-label="Close menu">&times;</button>
+    <div class="menu-content">
+      <div class="menu-col menu-left">
+        <ul class="menu-main-list">
+          <li><button class="menu-main-item active" data-menu-expand="solutions">Solutions</button></li>
+          <li><button class="menu-main-item" data-menu-expand="capabilities">Capabilities</button></li>
+          <li><button class="menu-main-item" data-menu-expand="industries">Industries</button></li>
+          <li><button class="menu-main-item" data-menu-expand="intelligence">Intelligence</button></li>
+          <li><button class="menu-main-item" data-menu-expand="about">About</button></li>
+        </ul>
+        <div class="menu-language">
+          <span class="menu-language-icon">?</span>
+          <button class="lang-active">EN</button>
+          <button>FR</button>
+        </div>
+      </div>
+      <div class="menu-col menu-right">
+        
+                    <div class="menu-sub-content" data-menu-sub="solutions">
+          <div class="mobile-sub-header">
+            <button class="menu-sub-back" type="button" aria-label="Back to menu">&lsaquo;</button>
+            <span class="mobile-sub-title">Solutions</span>
+          </div>
+          <ul class="menu-sub-list">
+            <li><a href="../solutions/risk-intelligence-monitoring.html">Risk Intelligence & Monitoring</a></li>
+            <li><a href="../solutions/executive-mobility-secure-travel.html">Executive Mobility & Secure Travel</a></li>
+            <li><a href="../solutions/executive-protection-coordination.html">Executive Protection Coordination</a></li>
+            <li><a href="../solutions/crisis-response-incident-coordination.html">Crisis Response & Incident Coordination</a></li>
+            <li><a href="../solutions/strategic-risk-advisory.html">Strategic Risk Advisory</a></li>
+          </ul>
+          <a href="../solutions/index.html" class="menu-sub-overview">Solutions Overview</a>
+        </div>
+<div class="menu-sub-content" data-menu-sub="capabilities">
+          <div class="mobile-sub-header">
+            <button class="menu-sub-back" type="button" aria-label="Back to menu">&lsaquo;</button>
+            <span class="mobile-sub-title">Capabilities</span>
+          </div>
+          <ul class="menu-sub-list">
+            <li><a href="../capabilities/intelligence-risk-analysis.html">Intelligence & Risk Analysis</a></li>
+            <li><a href="../capabilities/security-operations-monitoring.html">Security Operations & Monitoring</a></li>
+            <li><a href="../capabilities/protective-operations-coordination.html">Protective Operations Coordination</a></li>
+            <li><a href="../capabilities/incident-crisis-coordination.html">Incident & Crisis Coordination</a></li>
+            <li><a href="../capabilities/secure-mobility-planning.html">Secure Mobility Planning</a></li>
+            <li><a href="../capabilities/strategic-security-advisory.html">Strategic Security Advisory</a></li>
+          </ul>
+          <a href="../capabilities/index.html" class="menu-sub-overview">Capabilities Overview</a>
+        </div>
+        <div class="menu-sub-content" data-menu-sub="industries">
+          <div class="mobile-sub-header">
+            <button class="menu-sub-back" type="button" aria-label="Back to menu">&lsaquo;</button>
+            <span class="mobile-sub-title">Platforms</span>
+          </div>
+          <ul class="menu-sub-list">
+            <li><a href="../industries/corporate-executives.html">Corporate Executives</a></li>
+            <li><a href="../industries/international-visitors.html">International Visitors</a></li>
+            <li><a href="../industries/diplomats-delegations.html">Diplomats & Delegations</a></li>
+            <li><a href="../industries/ngos-project-teams.html">NGOs & Project Teams</a></li>
+            <li><a href="../industries/investors-consultants.html">Investors & Consultants</a></li>
+            <li><a href="../industries/event-organisers.html">Event Organisers</a></li>
+            <li><a href="../industries/family-offices.html">Family Offices</a></li>
+          </ul>
+          <a href="../industries/index.html" class="menu-sub-overview">Industries Overview</a>
+        </div>
+        <div class="menu-sub-content" data-menu-sub="insights">
+          <div class="mobile-sub-header">
+            <button class="menu-sub-back" type="button" aria-label="Back to menu">&lsaquo;</button>
+            <span class="mobile-sub-title">Insights</span>
+          </div>
+          <div class="menu-sub-grid">
+            <div class="menu-sub-primary">
+              <h4 class="menu-sub-heading">Featured Insights</h4>
+              <a href="../intelligence/insights.html" class="menu-sub-overview">Insights Overview</a>
+            </div>
+            <article class="menu-feature-card">
+              <img src="../../assets/images/slide-01.webp" alt="Global Risk Forecast" />
+              <h5>Global Risk Forecast</h5>
+              <p>Crisis24's Global Risk Forecast 2026 equips leaders to anticipate what is next and act fast with precision.</p>
+              <a href="../intelligence/insights.html" class="menu-feature-link">Learn more</a>
+            </article>
+          </div>
+        </div>
+        <div class="menu-sub-content" data-menu-sub="intelligence">
+          <div class="mobile-sub-header">
+            <button class="menu-sub-back" type="button" aria-label="Back to menu">&lsaquo;</button>
+            <span class="mobile-sub-title">Intelligence</span>
+          </div>
+          <div class="menu-sub-grid">
+            <div class="menu-sub-primary">
+              <h4 class="menu-sub-heading">Intelligence Briefings</h4>
+              <a href="../intelligence/index.html" class="menu-sub-overview">Intelligence Overview</a>
+              <a href="../intelligence/insights.html" class="menu-sub-overview">Insights</a>
+              
+              <a href="../intelligence/case-studies.html" class="menu-sub-overview">Case Studies</a>
+              <a href="../intelligence/active-alerts.html#active-alerts-section" class="menu-sub-overview">Active Alerts</a>
+              
+            </div>
+            <article class="menu-feature-card">
+              <img src="../../assets/images/slide-02.webp" alt="Intelligence platform" />
+              <h5>Live Intelligence Platform</h5>
+              <p>Track threat shifts, incident alerts, and travel advisories through a single intelligence-led operating picture.</p>
+              <a href="../intelligence/index.html" class="menu-feature-link">Learn more</a>
+            </article>
+          </div>
+        </div>
+        <div class="menu-sub-content" data-menu-sub="about">
+          <div class="mobile-sub-header">
+            <button class="menu-sub-back" type="button" aria-label="Back to menu">&lsaquo;</button>
+            <span class="mobile-sub-title">About</span>
+          </div>
+          <div class="menu-sub-grid">
+            <div class="menu-sub-primary">
+              <h4 class="menu-sub-heading">Who We Are</h4>
+              <a href="../about/index.html" class="menu-sub-overview">About Overview</a>
+            </div>
+            <article class="menu-feature-card">
+              <img src="../../assets/images/slide-03.webp" alt="About Securide24" />
+              <h5>Built for High-Stakes Decisions</h5>
+              <p>We combine strategic intelligence with field-tested coordination to protect people, operations, and reputation.</p>
+              <a href="../about/index.html" class="menu-feature-link">Learn more</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <button class="search-close" aria-label="Close search">&times;</button>
+    <div class="search-content">
+      <input type="search" class="search-input" placeholder="Search..." id="searchInput" />
+      <div class="popular-searches">
+        <h3>Popular Searches</h3>
+        <ul id="searchLinks">
+          <li><a href="../solutions/risk-intelligence-monitoring.html">Risk Intelligence & Monitoring</a></li>
+          <li><a href="../solutions/executive-mobility-secure-travel.html">Executive Mobility & Secure Travel</a></li>
+          <li><a href="../solutions/executive-protection-coordination.html">Executive Protection Coordination</a></li>
+          <li><a href="../solutions/crisis-response-incident-coordination.html">Crisis Response & Incident Coordination</a></li>
+          <li><a href="../solutions/strategic-risk-advisory.html">Strategic Risk Advisory</a></li>
+          <li><a href="../industries/corporate-executives.html">Corporate Executives</a></li>
+          <li><a href="../industries/diplomats-delegations.html">Diplomats & Delegations</a></li>
+          <li><a href="../capabilities/intelligence-risk-analysis.html">Intelligence & Risk Analysis</a></li>
+          <li><a href="../intelligence/insights.html">Insights</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Panel -->
+  <div class="contact-panel" id="contactPanel">
+    <button class="panel-close" aria-label="Close contact panel">&times;</button>
+    <div class="panel-content">
+      <div class="panel-label">Contact</div>
+      <h2>Build Organisational Resilience</h2>
+      <p>Our global team is ready to help you determine the security and risk management path that is right for you.</p>
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First name <span>*</span></label>
+            <input type="text" id="firstName" name="firstName" required />
+            <span class="error-msg"></span>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last name <span>*</span></label>
+            <input type="text" id="lastName" name="lastName" required />
+            <span class="error-msg"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email <span>*</span></label>
+          <input type="email" id="email" name="email" required />
+          <span class="error-msg"></span>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone <span>*</span></label>
+          <input type="tel" id="phone" name="phone" required />
+          <span class="error-msg"></span>
+        </div>
+        <div class="form-group">
+          <label for="company">Company name <span>*</span></label>
+          <input type="text" id="company" name="company" required />
+          <span class="error-msg"></span>
+        </div>
+        <div class="form-group">
+          <label for="industry">Industry <span>*</span></label>
+          <select id="industry" name="industry" required>
+            <option value="">Select industry</option>
+            <option value="corporate">Corporate</option>
+            <option value="diplomatic">Diplomatic</option>
+            <option value="ngo">NGO / Non-Profit</option>
+            <option value="finance">Finance / Investment</option>
+            <option value="events">Events</option>
+            <option value="family-office">Family Office</option>
+            <option value="other">Other</option>
+          </select>
+          <span class="error-msg"></span>
+        </div>
+        <div class="form-group">
+          <label for="requirement">Requirement <span>*</span></label>
+          <select id="requirement" name="requirement" required>
+            <option value="">Select requirement</option>
+            <option value="risk-intelligence-monitoring">Risk Intelligence & Monitoring</option>
+            <option value="executive-mobility-secure-travel">Executive Mobility & Secure Travel</option>
+            <option value="executive-protection-coordination">Executive Protection Coordination</option>
+            <option value="crisis-response-incident-coordination">Crisis Response & Incident Coordination</option>
+            <option value="strategic-risk-advisory">Strategic Risk Advisory</option>
+          </select>
+          <span class="error-msg"></span>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Request a Consultation</button>
+      </form>
+      <div class="form-success" id="formSuccess">
+        <p>Thank you &mdash; we will respond shortly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="about24-page">
+    <section class="about24-hero">
+      <div class="about24-hero-bg" aria-hidden="true"></div>
+      <div class="container about24-hero-inner">
+        <p class="about24-kicker">About Us</p>
+        <h1>ABOUT US</h1>
+        <p>Partnering with clients to manage complex, cross-border threats, and protect operational continuity.</p>
+      </div>
+    </section>
+
+    <section class="about24-path">
+      <div class="container about24-path-grid">
+        <div class="about24-path-copy">
+          <p class="about24-kicker">SECURIDE 24</p>
+          <h2>THE PATH<br />TO GREAT<br />RESILIENCE</h2>
+          <p>With intelligence-led planning, protective coordination, and decisive response support, SECURIDE 24 helps organisations navigate uncertainty with confidence across people, assets, reputation, and operations.</p>
+          <p class="about24-path-sign">S. MAJOR IMTIAZ<br />CEO, SECURIDE 24</p>
+        </div>
+        <figure class="about24-path-photo">
+          <img src="../../assets/images/slide-03.webp" alt="Major Imtiaz, CEO of Securide 24" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="about24-people">
+      <div class="container">
+        <div class="about24-head">
+          <h2>OUR PEOPLE</h2>
+          <p>We believe our values are shown through delivery. This is the team that supports clients in security risk management and incident coordination.</p>
+        </div>
+        <div class="about24-people-grid">
+          <article class="about24-person-card"><img src="../../assets/images/slide-01.webp" alt="Major Imtiaz" /><h3>Major Imtiaz</h3><p>Chief Executive Officer (CEO) &mdash; Securide 24</p></article>
+          <article class="about24-person-card"><img src="../../assets/images/slide-02.webp" alt="Muhammad Ahmad Malik" /><h3>Muhammad Ahmad Malik</h3><p>Director &mdash; Global Operations</p></article>
+          <article class="about24-person-card"><img src="../../assets/images/slide-04.webp" alt="Sayyed Yasir Shah" /><h3>Sayyed Yasir Shah</h3><p>Director &mdash; Risk Intelligence &amp; Strategic Analysis</p></article>
+          <article class="about24-person-card"><img src="../../assets/images/slide-02.webp" alt="Waleed Haider" /><h3>Waleed Haider</h3><p>Director &mdash; Business Development &amp; Strategic Partnerships</p></article>
+          <article class="about24-person-card"><img src="../../assets/images/slide-03.webp" alt="Tufail Khan" /><h3>Tufail Khan</h3><p>Director &mdash; Global Risk Management</p></article>
+          <article class="about24-person-card"><img src="../../assets/images/slide-01.webp" alt="Masood Kharal" /><h3>Masood Kharal</h3><p>Director &mdash; Global Travel Risk &amp; Protective Services</p></article>
+          <article class="about24-person-card"><img src="../../assets/images/slide-04.webp" alt="Muhammad Ashraf" /><h3>Muhammad Ashraf</h3><p>Senior Manager &mdash; Global Operations Coordination</p></article>
+          <article class="about24-person-card"><img src="../../assets/images/slide-02.webp" alt="Ayesha Arooj" /><h3>Ayesha Arooj</h3><p>Manager &mdash; Global Sales &amp; Client Solutions</p></article>
+          <article class="about24-person-card"><img src="../../assets/images/slide-03.webp" alt="Daim Khan" /><h3>Daim Khan</h3><p>Manager &mdash; Executive Protection &amp; Secure Mobility (Asia)</p></article>
+          <article class="about24-person-card"><img src="../../assets/images/slide-01.webp" alt="Sara Rose" /><h3>Sara Rose</h3><p>Manager &mdash; Client Success &amp; Strategic Accounts</p></article>
+          <article class="about24-person-card"><img src="../../assets/images/slide-02.webp" alt="Maria K" /><h3>Maria K</h3><p>Manager &mdash; Global Meetings, Events &amp; Client Coordination</p></article>
+          <article class="about24-person-card"><img src="../../assets/images/slide-04.webp" alt="Mike Jr." /><h3>Mike Jr.</h3><p>Manager &mdash; Compliance, Governance &amp; Standards</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about24-principles">
+      <div class="container about24-principles-grid">
+        <article>
+          <span>01</span>
+          <h3>WHAT OUR CLIENTS FACE</h3>
+          <p>Complex operating conditions, constrained response windows, and high consequences for delayed action.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>WHERE THE ANSWER LIES</h3>
+          <p>Integrated intelligence, coordinated security operations, and practical planning tailored to each context.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>HOW WE DELIVER</h3>
+          <p>Disciplined teams, clear command structures, and accountable execution across preparedness and response.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about24-solutions">
+      <div class="container">
+        <p class="about24-kicker">SECURIDE 24 SOLUTIONS</p>
+        <h2>COMPREHENSIVE SOLUTIONS<br />FOR THE MOST COMPLEX RISKS</h2>
+        <div class="about24-solutions-grid">
+          <a class="about24-solution-tile" href="../solutions/risk-intelligence-monitoring.html"><img src="../../assets/images/risk-assurance-bg.webp" alt="Risk Intelligence and Monitoring" /><span>Risk Intelligence &amp; Monitoring</span></a>
+          <a class="about24-solution-tile" href="../solutions/executive-mobility-secure-travel.html"><img src="../../assets/images/travel-bg.webp" alt="Executive Mobility and Secure Travel" /><span>Executive Mobility &amp; Secure Travel</span></a>
+          <a class="about24-solution-tile" href="../solutions/executive-protection-coordination.html"><img src="../../assets/images/risk-management-bg.webp" alt="Executive Protection Coordination" /><span>Executive Protection Coordination</span></a>
+          <a class="about24-solution-tile" href="../solutions/crisis-response-incident-coordination.html"><img src="../../assets/images/intelligence-alerts-bg.webp" alt="Crisis Response and Incident Coordination" /><span>Crisis Response &amp; Incident Coordination</span></a>
+          <a class="about24-solution-tile" href="../solutions/strategic-risk-advisory.html"><img src="../../assets/images/intelligence-monitoring-bg.webp" alt="Strategic Risk Advisory" /><span>Strategic Risk Advisory</span></a>
+          <a class="about24-solution-tile" href="../capabilities/security-operations-monitoring.html"><img src="../../assets/images/slider-bg.webp" alt="Security Operations and Monitoring" /><span>Security Operations &amp; Monitoring</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about24-experts">
+      <div class="container">
+        <h2>THE ONLY TRUE GLOBAL, END-TO-END SECURITY AND MEDICAL EXPERTS IN THE INDUSTRY</h2>
+        <div class="about24-experts-grid">
+          <article><h3>INTELLIGENCE THAT LEADS</h3><p>Risk decisions are grounded in context-rich monitoring and analysis.</p></article>
+          <article><h3>INTELLIGENCE AT THE CORE</h3><p>Operational planning is continuously informed by shifting threat conditions.</p></article>
+          <article><h3>SEAMLESS DELIVERY</h3><p>Preparedness, protective action, and response support are managed as one workflow.</p></article>
+          <article><h3>WORLD-CLASS EXPERTISE</h3><p>Advisors and field teams coordinate globally while executing locally.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about24-footprint">
+      <div class="container">
+        <h2>GLOBAL FOOTPRINT,<br />ALWAYS-ON SUPPORT</h2>
+        <div class="about24-map-wrap" role="img" aria-label="Global map highlighting Securide 24 regions">
+          <img src="../../assets/images/map-about.avif" alt="Global map" />
+          <span class="map-dot uk"></span>
+          <span class="map-dot middle-east"></span>
+          <span class="map-dot afghanistan"></span>
+          <span class="map-dot pakistan"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about24-stability">
+      <div class="container">
+        <div class="about24-head about24-head-light">
+          <h2>BRINGING STABILITY<br />TO AN UNSTABLE WORLD</h2>
+          <p>At work across six continents, SECURIDE 24 helps clients improve safety and operational resilience.</p>
+        </div>
+        <div class="about24-story-grid">
+          <article class="about24-story-card">
+            <img src="../../assets/images/slider-bg.webp" alt="Business district skyline" />
+            <div>
+              <span>CASE STUDY</span>
+              <h3>Fintech company enhances global security with executive protection and duty-of-care support</h3>
+            </div>
+          </article>
+          <article class="about24-story-card">
+            <img src="../../assets/images/intelligence-monitoring-bg.webp" alt="Crowded urban environment" />
+            <div>
+              <span>CASE STUDY</span>
+              <h3>Coordinated intelligence operations during high-demand public event periods</h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about24-cta">
+      <div class="container about24-cta-inner">
+        <h2>RISK IS WHERE<br />THE CONVERSATION BEGINS</h2>
+        <button class="btn btn-primary" data-open-contact>Contact Us</button>
+      </div>
+    </section>
+  </main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          
+                      <h4>Solutions</h4>
+          <ul>
+            <li><a href="../solutions/risk-intelligence-monitoring.html">Risk Intelligence & Monitoring</a></li>
+            <li><a href="../solutions/executive-mobility-secure-travel.html">Executive Mobility & Secure Travel</a></li>
+            <li><a href="../solutions/executive-protection-coordination.html">Executive Protection Coordination</a></li>
+            <li><a href="../solutions/crisis-response-incident-coordination.html">Crisis Response & Incident Coordination</a></li>
+            <li><a href="../solutions/strategic-risk-advisory.html">Strategic Risk Advisory</a></li>
+          </ul>
+</div>
+        <div class="footer-col">
+          <h4>Capabilities</h4>
+          <ul>
+            <li><a href="../capabilities/intelligence-risk-analysis.html">Intelligence & Risk Analysis</a></li>
+            <li><a href="../capabilities/security-operations-monitoring.html">Security Operations</a></li>
+            <li><a href="../capabilities/incident-crisis-coordination.html">Crisis Coordination</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../about/index.html">About</a></li>
+            <li><a href="../intelligence/insights.html">Insights</a></li>
+            <li><a href="../intelligence/index.html">Intelligence</a></li>
+            <li><a href="../intelligence/case-studies.html">Case Studies</a></li>
+            <li><a href="../contact/index.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <ul class="social-links">
+            <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+            <li><a href="#" aria-label="X (Twitter)">X</a></li>
+            <li><a href="#" aria-label="YouTube">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SECURIDE 24. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/utils.js"></script>
+  <script src="../../js/api.js"></script>
+  <script src="../../js/navigation.js"></script>
+  <script src="../../js/ticker.js"></script>
+  <script src="../../js/carousel.js"></script>
+  <script src="../../js/contact-panel.js"></script>
+  <script src="../../js/search.js"></script>
+  <script src="../../js/scroll.js"></script>
+  <script src="../../js/app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+

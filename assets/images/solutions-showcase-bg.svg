@@ -1,0 +1,54 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1920" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071226"/>
+      <stop offset="0.45" stop-color="#0A1B33"/>
+      <stop offset="1" stop-color="#1A1E2B"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(340 180) rotate(17) scale(530 300)">
+      <stop stop-color="#00D1FF" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#00D1FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1630 860) rotate(-12) scale(620 340)">
+      <stop stop-color="#FF5A5A" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#FF5A5A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#4FD3FF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#4FD3FF" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#4FD3FF" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" stroke="#9BB5D6" stroke-opacity="0.09"/>
+    </pattern>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+
+  <ellipse cx="340" cy="180" rx="530" ry="300" fill="url(#glowA)"/>
+  <ellipse cx="1630" cy="860" rx="620" ry="340" fill="url(#glowB)"/>
+
+  <g opacity="0.35">
+    <path d="M-80 290C180 250 280 360 520 330C790 295 870 180 1120 220C1360 258 1500 350 2000 315" stroke="url(#line)" stroke-width="2"/>
+    <path d="M-120 420C170 388 250 520 510 500C780 477 860 348 1130 386C1380 421 1540 528 2020 468" stroke="url(#line)" stroke-width="2"/>
+    <path d="M-100 560C170 534 260 668 520 644C790 620 900 488 1140 520C1380 552 1560 670 2030 618" stroke="url(#line)" stroke-width="2"/>
+    <path d="M-140 710C170 686 290 810 550 786C800 763 920 642 1170 670C1420 697 1600 818 2050 758" stroke="url(#line)" stroke-width="2"/>
+  </g>
+
+  <g fill="#A9C8E8" fill-opacity="0.35">
+    <circle cx="210" cy="280" r="2"/>
+    <circle cx="360" cy="330" r="2"/>
+    <circle cx="640" cy="302" r="2"/>
+    <circle cx="810" cy="238" r="2"/>
+    <circle cx="1070" cy="252" r="2"/>
+    <circle cx="1310" cy="316" r="2"/>
+    <circle cx="1490" cy="366" r="2"/>
+    <circle cx="1680" cy="410" r="2"/>
+    <circle cx="260" cy="610" r="2"/>
+    <circle cx="520" cy="646" r="2"/>
+    <circle cx="860" cy="602" r="2"/>
+    <circle cx="1200" cy="654" r="2"/>
+    <circle cx="1500" cy="708" r="2"/>
+  </g>
+</svg>

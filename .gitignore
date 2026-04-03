@@ -1,6 +1,7 @@
 # IDE
 .vs/
 .vscode/
+.wrangler/
 
 # Dependencies
 node_modules/
@@ -21,6 +22,7 @@ pnpm-debug.log*
 .env
 .env.*
 !.env.example
+.dev.vars
 
 # OS / file manager
 .DS_Store

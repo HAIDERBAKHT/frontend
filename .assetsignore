@@ -1,0 +1,12 @@
+**/.git
+**/.git/*
+**/.vs
+**/.vs/*
+**/.vscode
+**/.vscode/*
+**/node_modules
+**/node_modules/*
+**/.wrangler
+**/.wrangler/*
+**/.DS_Store
+**/Thumbs.db

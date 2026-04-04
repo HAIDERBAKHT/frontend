@@ -977,6 +977,10 @@ const Navigation = {
       return;
     }
 
+    this.menuOverlay.querySelectorAll('.menu-sub-back').forEach((button) => {
+      button.textContent = '‹';
+    });
+
     const platformsBtn = this.menuOverlay.querySelector('[data-menu-expand="platforms"]');
     const platformsSub = this.menuOverlay.querySelector('[data-menu-sub="platforms"]');
 

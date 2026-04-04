@@ -447,9 +447,15 @@
   justify-content: center;
   color: #0a0a0a;
   background-color: #e8e8e8;
-  font-size: 24px;
+  font-size: 0;
   line-height: 1;
   padding-bottom: 2px;
+}
+
+.menu-sub-back::before {
+  content: '\2039';
+  font-size: 24px;
+  line-height: 1;
 }
 
 .mobile-sub-title {

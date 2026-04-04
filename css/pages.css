@@ -262,91 +262,121 @@
 }
 /* Updated colors and accent line for Our Advantages */
 .advantages-section {
-  background: linear-gradient(135deg, #181a1f 0%, #23272a 100%);
-  padding: 48px 0 32px;
+  position: relative;
+  background-image:
+    radial-gradient(circle at 14% 12%, rgba(187, 255, 249, 0.55), transparent 42%),
+    radial-gradient(circle at 68% 34%, rgba(130, 208, 255, 0.30), transparent 40%),
+    linear-gradient(135deg, rgba(5, 57, 88, 0.70), rgba(7, 26, 45, 0.88)),
+    url("../assets/images/our-advantages-bg.webp");
+  background-size: auto, auto, auto, cover;
+  background-position: left top, right 20% top 30%, center, center;
+  background-repeat: no-repeat;
+  padding: 56px 0 40px;
+  overflow: hidden;
 }
+
+.advantages-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 58% 28%, rgba(198, 244, 255, 0.28), transparent 34%);
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.advantages-section .container {
+  position: relative;
+  z-index: 1;
+}
+
 .advantages-title {
   text-align: center;
   font-size: 2.1rem;
   font-weight: 700;
-  color: #fff;
+  color: #f4fbff;
   margin-bottom: 8px;
+  text-shadow: 0 2px 14px rgba(157, 232, 255, 0.30);
 }
+
 .advantages-accent {
-  width: 120px;
-  height: 6px;
-  background: linear-gradient(90deg, #deb840 0%, #fffbe6 50%, #deb840 100%);
-  border-radius: 3px;
-  margin: 18px auto 0 auto;
-  box-shadow: 0 0 16px 2px #deb84044;
-  position: relative;
+  display: none;
 }
-.advantages-accent::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 2px;
-  background: #fffbe6;
-  border-radius: 2px;
-  position: absolute;
-  left: 50%;
-  top: 2px;
-  transform: translateX(-50%);
-  opacity: 0.7;
-}
+
 .advantages-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
   margin-top: 32px;
 }
+
 .advantage-item {
-  background: linear-gradient(135deg, #23272a 0%, #1a1c21 100%);
-  color: #fff;
+  background: linear-gradient(145deg, rgba(6, 34, 72, 0.74), rgba(10, 52, 104, 0.52));
+  color: #f7fcff;
   border-radius: 18px;
-  box-shadow: 0 6px 32px rgba(0,0,0,0.18);
-  border: 1.5px solid rgba(222, 184, 64, 0.13);
+  box-shadow:
+    inset 0 0 0 1px rgba(173, 214, 255, 0.12),
+    0 12px 30px rgba(1, 14, 36, 0.42);
+  border: 1.5px solid rgba(110, 170, 255, 0.28);
+  backdrop-filter: blur(12px) saturate(130%);
   padding: 32px 28px;
   min-height: 260px;
-  transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   cursor: pointer;
 }
+
 .advantage-item:hover {
-  box-shadow: 0 0 32px 8px #deb84055, 0 12px 40px rgba(0,0,0,0.22);
-  border-color: #deb840;
-  background: linear-gradient(135deg, #23272a 0%, #2d2f36 100%);
+  transform: translateY(-4px);
+  box-shadow:
+    inset 0 0 0 1px rgba(190, 224, 255, 0.14),
+    0 10px 26px rgba(1, 14, 36, 0.46);
+  border-color: rgba(110, 170, 255, 0.42);
 }
+
 .advantage-item:active {
-  box-shadow: 0 0 40px 12px #deb84088, 0 12px 40px rgba(0,0,0,0.22);
-  border-color: #fffbe6;
+  transform: translateY(-1px);
 }
+
+.advantage-title,
+.advantage-desc {
+  color: #f7fcff;
+}
+
+.advantage-icon svg [stroke="#deb840"] {
+  stroke: #ffffff !important;
+}
+
+.advantage-icon svg [fill="#deb840"] {
+  fill: #ffffff !important;
+}
+
 @media (max-width: 700px) {
   .advantages-section {
     padding: 36px 0 24px;
   }
+
   .advantages-title {
     font-size: 1.5rem;
   }
-  .advantages-accent {
-    width: 90px;
-    height: 3px;
-    margin: 12px auto 0 auto;
-  }
+
   .advantages-list {
     grid-template-columns: 1fr;
     gap: 18px;
   }
+
   .advantage-item {
     padding: 18px 12px;
     min-height: 180px;
   }
-}
+
   .advantage-item h3 {
     font-size: 1.08rem;
   }
+
   .advantage-item p {
     font-size: 0.98rem;
   }
+}
 .why-securide-bg {
   background-image: url("../assets/images/why-securide-bg.webp");
   background-size: cover;
@@ -378,20 +408,23 @@
 }
 
 .approach-card-item {
-  background: #222;
+  background: linear-gradient(145deg, rgba(6, 34, 72, 0.72), rgba(10, 52, 104, 0.48));
   color: #fff;
+  border: 1px solid rgba(110, 170, 255, 0.28);
   border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  box-shadow: 0 12px 30px rgba(1, 14, 36, 0.42);
+  backdrop-filter: blur(12px) saturate(130%);
   padding: 32px 24px;
   flex: 1;
 }
 
 @media (max-width: 700px) {
   .approach-card-item {
-    background: linear-gradient(135deg, #23272a 0%, #1a1c21 100%);
+    background: linear-gradient(145deg, rgba(6, 34, 72, 0.74), rgba(9, 46, 92, 0.56));
     border-radius: 18px;
-    box-shadow: 0 6px 32px rgba(0,0,0,0.18);
-    border: 1.5px solid rgba(222, 184, 64, 0.13);
+    box-shadow: 0 10px 26px rgba(1, 14, 36, 0.46);
+    border: 1.5px solid rgba(110, 170, 255, 0.28);
+    backdrop-filter: blur(10px) saturate(125%);
     padding: 18px 12px;
     min-height: 180px;
     transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;

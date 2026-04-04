@@ -138,6 +138,72 @@ let countryNodes = {};
 
 // --- Tooltip -----------------------------------------------------------------
 let wrmTip = null;
+let wrmMobileModal = null;
+
+function isMobileMapView() {
+  return window.matchMedia('(max-width: 768px)').matches;
+}
+
+function getBriefingUrl(a2) {
+  return a2
+    ? 'pages/intelligence/active-alerts.html?country=' + a2
+    : 'pages/intelligence/active-alerts.html';
+}
+
+function getMobileModal() {
+  if (!wrmMobileModal) {
+    wrmMobileModal = document.createElement('div');
+    wrmMobileModal.className = 'wrm-mobile-overlay';
+    wrmMobileModal.innerHTML =
+      '<div class="wrm-mobile-card" role="dialog" aria-modal="true" aria-label="Country intelligence details">' +
+        '<button type="button" class="wrm-mobile-close" aria-label="Close country details">&times;</button>' +
+        '<div class="wrm-mobile-content"></div>' +
+      '</div>';
+
+    wrmMobileModal.addEventListener('click', function(e) {
+      if (e.target === wrmMobileModal || e.target.classList.contains('wrm-mobile-close')) {
+        wrmMobileModal.classList.remove('is-open');
+        wrmMobileModal.classList.remove('is-closing');
+      }
+    });
+
+    document.body.appendChild(wrmMobileModal);
+  }
+  return wrmMobileModal;
+}
+
+function showMobileCountryDetails(numericId) {
+  var a2 = ISO_N[numericId];
+  var name = ISO_NAMES[numericId] || a2 || 'Unknown';
+  var c = a2 ? COUNTRY_DATA[a2] : null;
+  var modal = getMobileModal();
+  var content = modal.querySelector('.wrm-mobile-content');
+  var risk = c ? c.risk : 'No Advisory';
+  var detail = c ? c.detail : 'No active advisory data for this country at the moment.';
+  var badge = RISK_BADGE[risk] || { bg: 'rgba(116, 134, 164, 0.22)', text: '#d7e4ff' };
+
+  content.innerHTML =
+    '<div class="wrm-mobile-header">' +
+      '<h3 class="wrm-mobile-name">' + name + '</h3>' +
+      '<span class="wrm-mobile-badge" style="background:' + badge.bg + ';color:' + badge.text + ';">' + risk + '</span>' +
+    '</div>' +
+    '<p class="wrm-mobile-detail">' + detail + '</p>' +
+    '<a class="wrm-mobile-briefing" href="' + getBriefingUrl(a2) + '">View Briefing</a>';
+
+  var briefingLink = content.querySelector('.wrm-mobile-briefing');
+  if (briefingLink) {
+    briefingLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      modal.classList.add('is-closing');
+      window.setTimeout(function() {
+        window.location.href = briefingLink.href;
+      }, 180);
+    });
+  }
+
+  modal.classList.remove('is-closing');
+  modal.classList.add('is-open');
+}
 function getTooltip() {
   if (!wrmTip) {
     wrmTip = document.createElement('div');
@@ -271,7 +337,7 @@ function initWorldRiskMap() {
       projection.fitExtent([[10, 18], [W - 10, H - 18]], { type: 'FeatureCollection', features: features });
 
       // Countries
-      g.selectAll('path.country')
+      var countries = g.selectAll('path.country')
         .data(features)
         .join('path')
         .attr('class', 'country')
@@ -285,31 +351,39 @@ function initWorldRiskMap() {
         .each(function(d) {
           countryNodes[+d.id] = this;
         })
-        .on('mouseover', function(event, d) {
-          var a2 = ISO_N[+d.id];
-          var base = (a2 && COUNTRY_DATA[a2]) ? COUNTRY_DATA[a2].color : DEFAULT_FILL;
-          try {
-            var col = d3.color(base).brighter(0.55);
-            d3.select(this).attr('fill', col.formatRgb());
-          } catch(e) { /* ignore */ }
-          d3.select(this).attr('stroke', '#ffffff').attr('stroke-width', 0.8);
-          showTooltip(event, +d.id);
-        })
-        .on('mousemove', function(event) { moveTooltip(event); })
-        .on('mouseout', function(event, d) {
-          var a2 = ISO_N[+d.id];
-          d3.select(this)
-            .attr('fill', (a2 && COUNTRY_DATA[a2]) ? COUNTRY_DATA[a2].color : DEFAULT_FILL)
-            .attr('stroke', '#0a1224')
-            .attr('stroke-width', 0.35);
-          hideTooltip();
-        })
         .on('click', function(event, d) {
           var a2 = ISO_N[+d.id];
-          if (a2 && COUNTRY_DATA[a2]) {
-            window.location.href = 'pages/intelligence/active-alerts.html?country=' + a2;
+          if (isMobileMapView()) {
+            showMobileCountryDetails(+d.id);
+            return;
+          }
+          if (a2) {
+            window.location.href = getBriefingUrl(a2);
           }
         });
+
+      if (!isMobileMapView()) {
+        countries
+          .on('mouseover', function(event, d) {
+            var a2 = ISO_N[+d.id];
+            var base = (a2 && COUNTRY_DATA[a2]) ? COUNTRY_DATA[a2].color : DEFAULT_FILL;
+            try {
+              var col = d3.color(base).brighter(0.55);
+              d3.select(this).attr('fill', col.formatRgb());
+            } catch(e) { /* ignore */ }
+            d3.select(this).attr('stroke', '#ffffff').attr('stroke-width', 0.8);
+            showTooltip(event, +d.id);
+          })
+          .on('mousemove', function(event) { moveTooltip(event); })
+          .on('mouseout', function(event, d) {
+            var a2 = ISO_N[+d.id];
+            d3.select(this)
+              .attr('fill', (a2 && COUNTRY_DATA[a2]) ? COUNTRY_DATA[a2].color : DEFAULT_FILL)
+              .attr('stroke', '#0a1224')
+              .attr('stroke-width', 0.35);
+            hideTooltip();
+          });
+      }
     })
     .catch(function(err) { console.warn('World map failed to load:', err); });
 }

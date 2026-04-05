@@ -23,6 +23,10 @@
   opacity: 0.85;
 }
 
+.hero-video-backdrop {
+  display: none;
+}
+
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -4352,16 +4356,20 @@
 
   .hero-section {
     position: relative;
-    height: auto;
-    min-height: 500px;
+    height: 100vh;
+    height: 100svh;
+    height: 100dvh;
+    min-height: 100svh;
+    min-height: 100dvh;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #0a0a0a;
+    background: linear-gradient(135deg, #0f1822 0%, #182432 50%, #0f1822 100%);
   }
 
-  .hero-video {
+  .hero-video-backdrop {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -4369,11 +4377,30 @@
     height: 100%;
     object-fit: cover;
     object-position: center center;
-    opacity: 0.65;
+    filter: blur(10px) saturate(0.95);
+    transform: scale(1.06);
+    opacity: 0.52;
+    z-index: 0;
+  }
+
+  .hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    transform: translate(-50%, -50%) translateZ(0) scale(1.005);
+    transform-origin: center center;
+    object-fit: contain;
+    object-position: center center;
+    opacity: 0.9;
+    z-index: 1;
   }
 
   .hero-overlay {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.48) 0%, rgba(0, 0, 0, 0.32) 50%, rgba(0, 0, 0, 0.48) 100%);
+    z-index: 2;
   }
 
   .hero-content {
@@ -4443,16 +4470,20 @@
 @media (max-width: 480px) {
   .hero-section {
     position: relative;
-    height: auto;
-    min-height: 450px;
+    height: 100vh;
+    height: 100svh;
+    height: 100dvh;
+    min-height: 100svh;
+    min-height: 100dvh;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #0a0a0a;
+    background: linear-gradient(135deg, #0f1822 0%, #182432 50%, #0f1822 100%);
   }
 
-  .hero-video {
+  .hero-video-backdrop {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -4460,11 +4491,30 @@
     height: 100%;
     object-fit: cover;
     object-position: center center;
-    opacity: 0.60;
+    filter: blur(12px) saturate(0.95);
+    transform: scale(1.08);
+    opacity: 0.55;
+    z-index: 0;
+  }
+
+  .hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    transform: translate(-50%, -50%) translateZ(0) scale(1.01);
+    transform-origin: center center;
+    object-fit: contain;
+    object-position: center center;
+    opacity: 0.92;
+    z-index: 1;
   }
 
   .hero-overlay {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.38) 50%, rgba(0, 0, 0, 0.55) 100%);
+    z-index: 2;
   }
 
   .hero-content {

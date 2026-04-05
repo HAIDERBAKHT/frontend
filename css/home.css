@@ -4357,6 +4357,11 @@
   flex-wrap: wrap;
 }
 
+.case-studies-section .section-cta .btn,
+.home-cta-band .cta-actions .btn {
+  min-width: 240px;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .slider-wrapper {

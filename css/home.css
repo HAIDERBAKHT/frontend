@@ -4713,12 +4713,13 @@
   position: relative;
   z-index: 4;
   border-radius: 10px;
-  border: 1px solid rgba(136, 148, 168, 0.34);
-  background: linear-gradient(155deg, rgba(30, 34, 42, 0.62), rgba(44, 49, 59, 0.46));
-  backdrop-filter: blur(12px) saturate(120%);
+  border: 1px solid rgba(92, 146, 214, 0.30);
+  background: linear-gradient(155deg, rgba(4, 14, 32, 0.86), rgba(8, 20, 42, 0.74));
+  backdrop-filter: blur(12px) saturate(130%);
   box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
-    0 16px 42px rgba(7, 11, 20, 0.30);
+    inset 0 0 0 1px rgba(180, 216, 255, 0.06),
+    0 16px 42px rgba(1, 8, 22, 0.56),
+    0 0 22px rgba(52, 116, 196, 0.12);
   padding: 20px 16px;
   display: flex;
   flex-direction: column;
@@ -4731,10 +4732,12 @@
 }
 
 .opreach-card:hover {
-  border-color: rgba(167, 178, 198, 0.56);
+  border-color: rgba(112, 174, 244, 0.50);
+  background: linear-gradient(155deg, rgba(6, 18, 40, 0.90), rgba(11, 28, 56, 0.78));
   box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-    0 20px 52px rgba(7, 11, 20, 0.36);
+    inset 0 0 0 1px rgba(186, 223, 255, 0.10),
+    0 20px 52px rgba(1, 8, 22, 0.64),
+    0 0 30px rgba(66, 132, 212, 0.16);
   transform: translateY(-4px);
 }
 
@@ -4758,7 +4761,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(219, 227, 242, 0.92);
+  color: rgba(186, 223, 255, 0.95);
   flex-shrink: 0;
 }
 
@@ -4786,13 +4789,13 @@
   letter-spacing: 0.02em;
   line-height: 1.2;
   text-transform: none;
-  font-size: 0.95rem;
+  font-size: 1.08rem;
 }
 
 .opreach-card p {
   margin: 2px 0 0;
   color: rgba(255, 255, 255, 0.80);
-  font-size: 0.82rem;
+  font-size: 0.92rem;
   line-height: 1.3;
   font-weight: 400;
 }
@@ -4832,14 +4835,15 @@
   align-items: flex-start;
   text-align: left;
   gap: 14px;
-  border-color: rgba(167, 178, 198, 0.56);
+  border-color: rgba(112, 174, 244, 0.46);
   box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-    0 22px 62px rgba(7, 11, 20, 0.38);
+    inset 0 0 0 1px rgba(186, 223, 255, 0.10),
+    0 22px 62px rgba(1, 8, 22, 0.66),
+    0 0 28px rgba(66, 132, 212, 0.14);
 }
 
 .opreach-card--engagement .opreach-engagement-title {
-  font-size: 1.2rem;
+  font-size: 1.34rem;
   letter-spacing: 0.06em;
   font-weight: 800;
   color: #ffffff;
@@ -4849,7 +4853,7 @@
 .opreach-card--engagement .opreach-engagement-text {
   color: rgba(255, 255, 255, 0.80);
   line-height: 1.5;
-  font-size: 0.82rem;
+  font-size: 0.94rem;
   font-weight: 400;
   margin: 0;
 }
@@ -4857,7 +4861,7 @@
 .opreach-card--engagement .opreach-engagement-cta {
   margin-top: 6px;
   padding: 6px 14px;
-  border-color: rgba(167, 178, 198, 0.56);
+  border-color: rgba(112, 174, 244, 0.46);
 }
 
 @keyframes opreach-ring-pulse {
@@ -5010,11 +5014,11 @@
   }
 
   .opreach-card h3 {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .opreach-card p {
-    font-size: 0.78rem;
+    font-size: 0.86rem;
   }
 
   .opreach-card--engagement {
@@ -5022,11 +5026,11 @@
   }
 
   .opreach-card--engagement .opreach-engagement-title {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .opreach-card--engagement .opreach-engagement-text {
-    font-size: 0.78rem;
+    font-size: 0.84rem;
   }
 
   .opreach-globe-wrap {
@@ -5065,11 +5069,11 @@
   }
 
   .opreach-card h3 {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
   }
 
   .opreach-card p {
-    font-size: 0.75rem;
+    font-size: 0.82rem;
   }
 
   .opreach-card-icon {
@@ -5083,11 +5087,11 @@
   }
 
   .opreach-card--engagement .opreach-engagement-title {
-    font-size: 1rem;
+    font-size: 1.08rem;
   }
 
   .opreach-card--engagement .opreach-engagement-text {
-    font-size: 0.73rem;
+    font-size: 0.78rem;
     line-height: 1.4;
   }
 
@@ -5104,7 +5108,7 @@
 .world-risk-map-section {
   position: relative;
   padding: var(--spacing-3xl) 0;
-  background: linear-gradient(180deg, #0a0f1e 0%, #0d1a38 50%, #0a0f1e 100%);
+  background: linear-gradient(180deg, #20242b 0%, #303640 52%, #20242b 100%);
   overflow: hidden;
 }
 
@@ -5113,12 +5117,12 @@
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle at 20% 30%, rgba(76, 201, 240, 0.06), transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(222, 184, 64, 0.04), transparent 45%),
-    linear-gradient(90deg, rgba(76, 201, 240, 0.02) 1px, transparent 1px),
-    linear-gradient(rgba(76, 201, 240, 0.02) 1px, transparent 1px);
+    radial-gradient(circle at 20% 30%, rgba(204, 210, 220, 0.10), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(162, 168, 178, 0.08), transparent 45%),
+    linear-gradient(90deg, rgba(204, 210, 220, 0.03) 1px, transparent 1px),
+    linear-gradient(rgba(204, 210, 220, 0.03) 1px, transparent 1px);
   background-size: 100% 100%, 100% 100%, 60px 60px, 60px 60px;
-  opacity: 0.4;
+  opacity: 0.42;
   z-index: 0;
   pointer-events: none;
 }
@@ -5153,11 +5157,11 @@
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid rgba(76, 201, 240, 0.3);
-  background: linear-gradient(135deg, rgba(5, 15, 45, 0.8), rgba(10, 20, 50, 0.75));
+  border: 1px solid rgba(186, 193, 204, 0.42);
+  background: linear-gradient(155deg, rgba(48, 53, 62, 0.90), rgba(70, 76, 88, 0.78));
   box-shadow:
-    inset 0 0 40px rgba(76, 201, 240, 0.08),
-    0 20px 60px rgba(0, 0, 0, 0.4);
+    inset 0 0 36px rgba(196, 203, 214, 0.16),
+    0 20px 60px rgba(8, 10, 14, 0.50);
   backdrop-filter: blur(10px);
 }
 

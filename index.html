@@ -353,6 +353,7 @@
         <source src="assets/video/hero.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
+      <div class="hero-overlay"></div>
     </section>
 
     <!-- Why SECURIDE 24 -->
@@ -450,55 +451,6 @@
       </div>
     </section>
 
-    <!-- Active Intelligence Alerts -->
-    <section class="intelligence-alerts-section">
-      <div class="container">
-        <div class="alerts-wrapper">
-          <div class="alerts-content">
-            <h2 class="alerts-title">Active Intelligence Alerts</h2>
-            <p class="alerts-subtitle">Actionable operational updates for secure travel and mobility planning.</p>
-            
-            <div class="alerts-status">
-              <span class="status-indicator">
-                <span class="status-icon"></span>
-                Live Monitoring Active
-              </span>
-            </div>
-            
-            <p class="alerts-description">
-              Securide24 Intelligence continuously monitors global travel risks, mobility disruptions, and security developments that may affect executive movement and operational continuity.
-            </p>
-          </div>
-          
-          <div class="alerts-card-wrapper">
-            <div class="alert-card alert-low" id="rotatingAlertCard" data-alert-index="0">
-              <div class="alert-header">
-                <div class="alert-location">
-                  <span class="location-text alert-location-text">Istanbul, Turkey</span>
-                  <img class="flag-corner alert-flag-corner" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MjAgNjEwIj48cmVjdCB3aWR0aD0iOTIwIiBoZWlnaHQ9IjYxMCIgZmlsbD0iIzAwNTA0RiIvPjxyZWN0IHg9IjI3NiIgeT0iMCIgd2lkdGg9IjkyIiBoZWlnaHQ9IjYxMCIgZmlsbD0iI0ZGQzQwMCIvPjxyZWN0IHg9IjAiIHk9IjIzMCIgd2lkdGg9IjkyMCIgaGVpZ2h0PSIxNTAiIGZpbGw9IiNGRkM0MDAiLz48L3N2Zz4=" alt="Flag" />
-                </div>
-              </div>
-              
-              <div class="alert-type">
-                <span class="alert-icon">!</span>
-                <span class="alert-label alert-label-text">Political Instability</span>
-                <span class="alert-badge alert-badge-high alert-badge-current">High</span>
-              </div>
-              
-              <p class="alert-message alert-message-text">
-                Heightened political tensions and security alerts in central districts. Exercise heightened caution.
-              </p>
-              
-              <div class="alert-footer">
-                <span class="alert-timestamp alert-timestamp-text">Updated: 12 mins ago</span>
-                <a href="pages/intelligence/active-alerts.html#active-alerts-section" class="alert-cta">Learn More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="operational-reach-section" aria-label="Operational Reach">
       <div class="container">
         <h2 class="opreach-title">Operational Reach</h2>
@@ -581,52 +533,6 @@
               <div class="opreach-globe-core"></div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Country Risk Explorer Map -->
-    <section class="world-risk-map-section" aria-label="Country Risk Explorer">
-      <div class="container">
-        <div class="risk-map-header">
-          <h2 class="risk-map-title">Risk Map</h2>
-          <p class="risk-map-subtitle">Intelligence-led risk coverage across key regions. Hover over any country to view risk classification and operational advisory details.</p>
-        </div>
-
-        <div class="risk-map-controls">
-          <div class="risk-map-search">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="11" cy="11" r="8"/>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-            </svg>
-            <input type="text" id="countrySearch" placeholder="Search country..." autocomplete="off" aria-label="Search country" />
-            <div id="countrySearchResults" class="country-search-results" role="listbox"></div>
-          </div>
-          <div class="risk-map-legend">
-            <span class="risk-legend-item"><span class="risk-legend-dot" style="background:#e63946"></span>High Risk</span>
-            <span class="risk-legend-item"><span class="risk-legend-dot" style="background:#f4a261"></span>Elevated</span>
-            <span class="risk-legend-item"><span class="risk-legend-dot" style="background:#e9c46a"></span>Moderate</span>
-            <span class="risk-legend-item"><span class="risk-legend-dot" style="background:#4cc9f0"></span>Monitored</span>
-            <span class="risk-legend-item"><span class="risk-legend-dot" style="background:#3a7bd5"></span>Advisory</span>
-          </div>
-        </div>
-
-        <div class="risk-map-container">
-          <div id="worldRiskMap"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tagline Section -->
-    <section class="tagline-section">
-      <div class="container">
-        <div class="tagline-content">
-          <div class="tagline-text-wrapper">
-            <div class="tagline-line step-top">WHERE RISK EMERGES</div>
-            <div class="tagline-line step-middle">SECURITY RESPONDS</div>
-            <div class="tagline-line step-bottom">RESILIENCE ENDURES</div>
-          </div>
-          <button class="btn-tagline-cta" data-open-contact>Contact Us</button>
         </div>
       </div>
     </section>
@@ -731,6 +637,87 @@
             </div>
             <h3 class="process-step-label">Recover</h3>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Active Intelligence Alerts -->
+    <section class="intelligence-alerts-section">
+      <div class="container">
+        <div class="alerts-wrapper">
+          <div class="alerts-content">
+            <h2 class="alerts-title">Active Intelligence Alerts</h2>
+            <p class="alerts-subtitle">Actionable operational updates for secure travel and mobility planning.</p>
+            
+            <div class="alerts-status">
+              <span class="status-indicator">
+                <span class="status-icon"></span>
+                Live Monitoring Active
+              </span>
+            </div>
+            
+            <p class="alerts-description">
+              Securide24 Intelligence continuously monitors global travel risks, mobility disruptions, and security developments that may affect executive movement and operational continuity.
+            </p>
+          </div>
+          
+          <div class="alerts-card-wrapper">
+            <div class="alert-card alert-low" id="rotatingAlertCard" data-alert-index="0">
+              <div class="alert-header">
+                <div class="alert-location">
+                  <span class="location-text alert-location-text">Istanbul, Turkey</span>
+                  <img class="flag-corner alert-flag-corner" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MjAgNjEwIj48cmVjdCB3aWR0aD0iOTIwIiBoZWlnaHQ9IjYxMCIgZmlsbD0iIzAwNTA0RiIvPjxyZWN0IHg9IjI3NiIgeT0iMCIgd2lkdGg9IjkyIiBoZWlnaHQ9IjYxMCIgZmlsbD0iI0ZGQzQwMCIvPjxyZWN0IHg9IjAiIHk9IjIzMCIgd2lkdGg9IjkyMCIgaGVpZ2h0PSIxNTAiIGZpbGw9IiNGRkM0MDAiLz48L3N2Zz4=" alt="Flag" />
+                </div>
+              </div>
+              
+              <div class="alert-type">
+                <span class="alert-icon">!</span>
+                <span class="alert-label alert-label-text">Political Instability</span>
+                <span class="alert-badge alert-badge-high alert-badge-current">High</span>
+              </div>
+              
+              <p class="alert-message alert-message-text">
+                Heightened political tensions and security alerts in central districts. Exercise heightened caution.
+              </p>
+              
+              <div class="alert-footer">
+                <span class="alert-timestamp alert-timestamp-text">Updated: 12 mins ago</span>
+                <a href="pages/intelligence/active-alerts.html#active-alerts-section" class="alert-cta">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Country Risk Explorer Map -->
+    <section class="world-risk-map-section" aria-label="Country Risk Explorer">
+      <div class="container">
+        <div class="risk-map-header">
+          <h2 class="risk-map-title">Risk Map</h2>
+          <p class="risk-map-subtitle">Intelligence-led risk coverage across key regions. Hover over any country to view risk classification and operational advisory details.</p>
+        </div>
+
+        <div class="risk-map-controls">
+          <div class="risk-map-search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="text" id="countrySearch" placeholder="Search country..." autocomplete="off" aria-label="Search country" />
+            <div id="countrySearchResults" class="country-search-results" role="listbox"></div>
+          </div>
+          <div class="risk-map-legend">
+            <span class="risk-legend-item"><span class="risk-legend-dot" style="background:#e63946"></span>High Risk</span>
+            <span class="risk-legend-item"><span class="risk-legend-dot" style="background:#f4a261"></span>Elevated</span>
+            <span class="risk-legend-item"><span class="risk-legend-dot" style="background:#e9c46a"></span>Moderate</span>
+            <span class="risk-legend-item"><span class="risk-legend-dot" style="background:#4cc9f0"></span>Monitored</span>
+            <span class="risk-legend-item"><span class="risk-legend-dot" style="background:#3a7bd5"></span>Advisory</span>
+          </div>
+        </div>
+
+        <div class="risk-map-container">
+          <div id="worldRiskMap"></div>
         </div>
       </div>
     </section>

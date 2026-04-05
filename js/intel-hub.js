@@ -256,6 +256,28 @@
     }
   }
 
+  function applyContentByKey(pageType, contentKey, buttons, pageContent, pageAuthors, shouldSyncHash) {
+    const content = contentKey ? pageContent[contentKey] : null;
+    const author = contentKey && pageAuthors ? pageAuthors[contentKey] : null;
+    const activeButton = buttons.find((button) => button.getAttribute('data-intel-key') === contentKey) || null;
+
+    if (!content || !activeButton) {
+      return false;
+    }
+
+    setActiveButton(buttons, activeButton);
+    updateContent(content, author);
+
+    if (shouldSyncHash) {
+      const nextHash = `#${contentKey}`;
+      if (window.location.hash !== nextHash) {
+        window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}${nextHash}`);
+      }
+    }
+
+    return true;
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     const section = document.querySelector('[data-intel-page]');
     if (!section) {
@@ -274,18 +296,31 @@
       return;
     }
 
+    const shouldSyncHash = pageType === 'case-studies';
+    const defaultKey = buttons[0].getAttribute('data-intel-key');
+    const hashKey = window.location.hash ? decodeURIComponent(window.location.hash.slice(1)) : '';
+    const initialKey = hashKey && pageContent[hashKey] ? hashKey : defaultKey;
+
+    if (initialKey) {
+      applyContentByKey(pageType, initialKey, buttons, pageContent, pageAuthors, false);
+
+      if (hashKey && pageType === 'case-studies') {
+        section.scrollIntoView({ block: 'start' });
+      }
+    }
+
     buttons.forEach((button) => {
       button.addEventListener('click', () => {
         const contentKey = button.getAttribute('data-intel-key');
-        const content = contentKey ? pageContent[contentKey] : null;
-        const author = contentKey && pageAuthors ? pageAuthors[contentKey] : null;
-        if (!content) {
-          return;
-        }
-
-        setActiveButton(buttons, button);
-        updateContent(content, author);
+        applyContentByKey(pageType, contentKey, buttons, pageContent, pageAuthors, shouldSyncHash);
       });
+    });
+
+    window.addEventListener('hashchange', () => {
+      const nextKey = window.location.hash ? decodeURIComponent(window.location.hash.slice(1)) : '';
+      if (nextKey && pageContent[nextKey]) {
+        applyContentByKey(pageType, nextKey, buttons, pageContent, pageAuthors, false);
+      }
     });
   });
 })();

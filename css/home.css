@@ -29,7 +29,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: transparent;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0.3) 100%);
   z-index: 1;
 }
 
@@ -4351,12 +4351,14 @@
   }
 
   .hero-section {
-    height: 100vh;
-    height: 100svh;
-    height: 100dvh;
-    min-height: 680px;
-    max-height: none;
+    position: relative;
+    height: auto;
+    min-height: 500px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0a0a0a;
   }
 
   .hero-video {
@@ -4365,21 +4367,27 @@
     left: 0;
     width: 100%;
     height: 100%;
-    min-width: 100%;
-    min-height: 100%;
     object-fit: cover;
     object-position: center center;
-    transform: translateZ(0) scale(1.005);
-    transform-origin: center center;
-    opacity: 0.96;
+    opacity: 0.65;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.48) 0%, rgba(0, 0, 0, 0.32) 50%, rgba(0, 0, 0, 0.48) 100%);
+  }
+
+  .hero-content {
+    padding: var(--spacing-xl) var(--spacing-lg);
   }
 
   .hero-content h1 {
     font-size: var(--font-size-2xl);
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
   }
 
   .hero-subheading {
     font-size: var(--font-size-base);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
   }
 
   .hero-grid-lines {
@@ -4434,12 +4442,14 @@
 
 @media (max-width: 480px) {
   .hero-section {
-    height: 98vh;
-    height: 98svh;
-    height: 98dvh;
-    min-height: 640px;
-    max-height: none;
+    position: relative;
+    height: auto;
+    min-height: 450px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0a0a0a;
   }
 
   .hero-video {
@@ -4448,13 +4458,25 @@
     left: 0;
     width: 100%;
     height: 100%;
-    min-width: 100%;
-    min-height: 100%;
     object-fit: cover;
     object-position: center center;
-    transform: translateZ(0) scale(1.01);
-    transform-origin: center center;
-    opacity: 0.98;
+    opacity: 0.60;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.38) 50%, rgba(0, 0, 0, 0.55) 100%);
+  }
+
+  .hero-content {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .hero-content h1 {
+    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.8);
+  }
+
+  .hero-subheading {
+    text-shadow: 0 2px 9px rgba(0, 0, 0, 0.7);
   }
 
   .hero-actions {
@@ -4501,11 +4523,14 @@
    =========================================== */
 .operational-reach-section {
   position: relative;
-  background-color: #f4f8fc;
+  background:
+    radial-gradient(circle at top left, rgba(201, 157, 54, 0.08), transparent 28%),
+    radial-gradient(circle at 82% 24%, rgba(201, 157, 54, 0.06), transparent 24%),
+    linear-gradient(180deg, #121212 0%, #0d0d0d 100%);
   overflow: hidden;
   padding: var(--spacing-3xl) 0;
-  border-top: 1px solid rgba(12, 28, 54, 0.08);
-  border-bottom: 1px solid rgba(12, 28, 54, 0.08);
+  border-top: 1px solid rgba(201, 157, 54, 0.18);
+  border-bottom: 1px solid rgba(201, 157, 54, 0.18);
 }
 
 .operational-reach-section::before {
@@ -4513,9 +4538,9 @@
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle at 12% 22%, rgba(123, 165, 224, 0.08), transparent 32%),
-    radial-gradient(circle at 80% 45%, rgba(87, 155, 231, 0.11), transparent 35%),
-    radial-gradient(circle at 40% 78%, rgba(164, 196, 240, 0.10), transparent 34%);
+    radial-gradient(circle at 12% 22%, rgba(201, 157, 54, 0.09), transparent 32%),
+    radial-gradient(circle at 80% 45%, rgba(201, 157, 54, 0.07), transparent 35%),
+    radial-gradient(circle at 40% 78%, rgba(255, 214, 102, 0.06), transparent 34%);
   z-index: 0;
   pointer-events: none;
 }
@@ -4527,9 +4552,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: radial-gradient(rgba(10, 32, 64, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(201, 157, 54, 0.11) 1px, transparent 1px);
   background-size: 28px 28px;
-  opacity: 0.22;
+  opacity: 0.14;
   z-index: 0;
   pointer-events: none;
 }
@@ -4593,7 +4618,7 @@
   font-size: clamp(2.3rem, 3.4vw, 3.4rem);
   font-weight: 600;
   font-family: inherit;
-  color: #000;
+  color: #f7f2e4;
   margin-bottom: var(--spacing-sm);
   margin-left: 0;
   letter-spacing: 0;
@@ -4713,13 +4738,13 @@
   position: relative;
   z-index: 4;
   border-radius: 10px;
-  border: 1px solid rgba(92, 146, 214, 0.30);
-  background: linear-gradient(155deg, rgba(4, 14, 32, 0.86), rgba(8, 20, 42, 0.74));
+  border: 1px solid rgba(201, 157, 54, 0.6);
+  background: linear-gradient(155deg, rgba(22, 22, 22, 0.96), rgba(14, 14, 14, 0.88));
   backdrop-filter: blur(12px) saturate(130%);
   box-shadow:
-    inset 0 0 0 1px rgba(180, 216, 255, 0.06),
-    0 16px 42px rgba(1, 8, 22, 0.56),
-    0 0 22px rgba(52, 116, 196, 0.12);
+    inset 0 0 0 1px rgba(255, 222, 143, 0.08),
+    0 16px 42px rgba(0, 0, 0, 0.48),
+    0 0 22px rgba(201, 157, 54, 0.12);
   padding: 20px 16px;
   display: flex;
   flex-direction: column;
@@ -4732,12 +4757,12 @@
 }
 
 .opreach-card:hover {
-  border-color: rgba(112, 174, 244, 0.50);
-  background: linear-gradient(155deg, rgba(6, 18, 40, 0.90), rgba(11, 28, 56, 0.78));
+  border-color: rgba(222, 184, 64, 0.88);
+  background: linear-gradient(155deg, rgba(28, 28, 28, 0.98), rgba(18, 18, 18, 0.92));
   box-shadow:
-    inset 0 0 0 1px rgba(186, 223, 255, 0.10),
-    0 20px 52px rgba(1, 8, 22, 0.64),
-    0 0 30px rgba(66, 132, 212, 0.16);
+    inset 0 0 0 1px rgba(255, 230, 166, 0.12),
+    0 20px 52px rgba(0, 0, 0, 0.58),
+    0 0 30px rgba(222, 184, 64, 0.18);
   transform: translateY(-4px);
 }
 
@@ -4761,7 +4786,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(186, 223, 255, 0.95);
+  color: #deb840;
   flex-shrink: 0;
 }
 
@@ -4835,11 +4860,11 @@
   align-items: flex-start;
   text-align: left;
   gap: 14px;
-  border-color: rgba(112, 174, 244, 0.46);
+  border-color: rgba(201, 157, 54, 0.72);
   box-shadow:
-    inset 0 0 0 1px rgba(186, 223, 255, 0.10),
-    0 22px 62px rgba(1, 8, 22, 0.66),
-    0 0 28px rgba(66, 132, 212, 0.14);
+    inset 0 0 0 1px rgba(255, 226, 153, 0.1),
+    0 22px 62px rgba(0, 0, 0, 0.6),
+    0 0 28px rgba(201, 157, 54, 0.14);
 }
 
 .opreach-card--engagement .opreach-engagement-title {
@@ -4861,7 +4886,7 @@
 .opreach-card--engagement .opreach-engagement-cta {
   margin-top: 6px;
   padding: 6px 14px;
-  border-color: rgba(112, 174, 244, 0.46);
+  border-color: rgba(201, 157, 54, 0.72);
 }
 
 @keyframes opreach-ring-pulse {

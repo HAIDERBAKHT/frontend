@@ -1,6 +1,85 @@
 // app.js - bootstraps site
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  const initCaseStudyCardLinks = () => {
+    const pathname = window.location.pathname.toLowerCase();
+    const isOperationalSubpage = /\/(industries|solutions|capabilities)\//.test(pathname) && !/\/index\.html$/.test(pathname);
+    if (!isOperationalSubpage) {
+      return;
+    }
+
+    const resolveCaseStudyKey = (card) => {
+      const heading = (card.querySelector('h3')?.textContent || '').trim().toLowerCase();
+      const cardText = `${heading} ${pathname}`;
+
+      if (/(delegation|diplomat|venue|event organiser|event security|event)/.test(cardText)) {
+        return 'delegation-venue-security';
+      }
+
+      if (/(cross-border|cross border|ngo|project team|jurisdiction|regional project|team protection)/.test(cardText)) {
+        return 'cross-border-team-protection';
+      }
+
+      if (/(evacuation|drill|incident|response rehearsal)/.test(cardText)) {
+        return 'incident-evacuation-drill';
+      }
+
+      if (/(crisis|command|handover|leadership|governance|advisory|resilien)/.test(cardText)) {
+        return 'crisis-command-handover';
+      }
+
+      if (/(route|mobility|travel|movement|transit|convoy|reroute|visitor|executive)/.test(cardText)) {
+        return 'executive-convoy-reroute';
+      }
+
+      return 'summit-route-hardening';
+    };
+
+    const caseStudyCards = Array.from(document.querySelectorAll('.solution-detail-card')).filter((card) => {
+      const label = card.querySelector('.card-label');
+      return label && label.textContent.trim().toLowerCase() === 'case study';
+    });
+
+    if (!caseStudyCards.length) {
+      return;
+    }
+
+    caseStudyCards.forEach((card) => {
+      const contentKey = resolveCaseStudyKey(card);
+      const targetHref = `../intelligence/case-studies.html#${contentKey}`;
+
+      card.classList.add('case-study-card-link');
+      card.dataset.caseStudyHref = targetHref;
+
+      if (!card.hasAttribute('tabindex')) {
+        card.setAttribute('tabindex', '0');
+      }
+
+      card.setAttribute('role', 'link');
+      card.setAttribute('aria-label', `${card.querySelector('h3')?.textContent?.trim() || 'Case study'} - open case studies page`);
+
+      const openCaseStudy = () => {
+        window.location.assign(targetHref);
+      };
+
+      card.addEventListener('click', (event) => {
+        if (event.target.closest('a[href], button')) {
+          return;
+        }
+
+        openCaseStudy();
+      });
+
+      card.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openCaseStudy();
+        }
+      });
+    });
+  };
+
   const initSolutionsTeamProfiles = () => {
     const leadershipProfiles = [
       {
@@ -544,6 +623,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initSolutionsTeamProfiles();
+  initCaseStudyCardLinks();
   initMonitoringLeafletMap();
 
   console.log('SECURIDE 24 initialized');
